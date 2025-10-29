@@ -21,7 +21,7 @@ export function StudentDashboard() {
 
       {/* Navigation Menu */}
       <nav className="flex items-center bg-primary text-white">
-        <p className="text-2xl font-bold mx-4">AIMS-IITRPR</p>
+        <p className="text-2xl font-bold mx-4">AIMS-DTU</p>
         <ul className="flex flex-row">
           {/* Dynamic Components */}
           {components.map((component) => (

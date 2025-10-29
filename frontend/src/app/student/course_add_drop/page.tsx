@@ -128,13 +128,13 @@
 //         };
 //         if (selectedView === "students") {
 //           const res = await axios.get(
-//             "${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL}/api/users/students",
+//             "http://localhost:5000/api/users/students",
 //             { headers }
 //           );
 //           setStudents(res.data);
 //         } else {
 //           const res = await axios.get(
-//             "${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL}/api/users/faculty-advisors",
+//             "http://localhost:5000/api/users/faculty-advisors",
 //             { headers }
 //           );
 //           setFaculty(res.data);
@@ -237,7 +237,7 @@ function Course_Add_Drop() {
         };
         console.log("token", token);
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL}/api/courses/available`,
+          "http://localhost:5000/api/courses/available",
           { headers }
         );
         setCourses(response.data);
@@ -309,7 +309,7 @@ function Course_Add_Drop() {
       // Make API calls for each selected course
       const enrollmentPromises = selectedCourses.map((courseId) =>
         axios.post(
-          `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL}/api/enrollments/`,
+          "http://localhost:5000/api/enrollments/",
           { courseId },
           { headers }
         )
@@ -380,7 +380,7 @@ function Course_Add_Drop() {
       // Make API calls for each selected course
       const dropPromises = selectedCourses.map((courseId) =>
         axios.put(
-          `${process.env.NEXT_PUBLIC_NEXT_PUBLIC_BACKEND_URL}/api/enrollments/drop`,
+          "http://localhost:5000/api/enrollments/drop",
           { courseId },
           { headers }
         )
